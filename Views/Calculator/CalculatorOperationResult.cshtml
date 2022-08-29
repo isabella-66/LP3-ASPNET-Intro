@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Calculator Operation Result";
+}
+
+<div>
+    <h1>Resultado da @Model.Operator</h1>
+    <p>
+        @if(@Model.Operator == "sum")
+        {
+            <p> A soma de @Model.NumberOne + @Model.NumberTwo é igual a @(Model.NumberOne + Model.NumberTwo); </p>
+        }
+        else if(@Model.Operator == "sub")
+        {
+            <p> A subtração de @Model.NumberOne - @Model.NumberTwo é igual a @(Model.NumberOne - Model.NumberTwo); </p>
+        }
+        else if(@Model.Operator == "mult")
+        {
+            <p> A multiplicação de @Model.NumberOne x @Model.NumberTwo é igual a @(Model.NumberOne * Model.NumberTwo); </p>
+        }
+        else if(@Model.Operator == "div")
+        {
+            <p> A divisão de @Model.NumberOne / @Model.NumberTwo é igual a @(Model.NumberOne / Model.NumberTwo); </p>
+        }
+    </p>
+</div>
